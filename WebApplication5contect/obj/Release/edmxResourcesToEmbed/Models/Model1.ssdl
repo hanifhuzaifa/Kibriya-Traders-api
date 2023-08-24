@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="contactModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Table_1">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="email" Type="nvarchar" MaxLength="50" />
+    <Property Name="phonenumber" Type="nchar" MaxLength="10" />
+    <Property Name="subject" Type="nvarchar" MaxLength="50" />
+    <Property Name="message" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Table_2">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Phone" Type="nvarchar(max)" />
+    <Property Name="Shipping_Destination" Type="nvarchar(max)" />
+    <Property Name="type_or_Product" Type="nvarchar(max)" />
+    <Property Name="approx_product_quantity" Type="int" />
+    <Property Name="url" Type="nvarchar(max)" />
+    <Property Name="Are_you_selling_this_product_already" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="Table_3">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" />
+    <Property Name="cummint" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="contactModelStoreContainer">
+    <EntitySet Name="Table_1" EntityType="Self.Table_1" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table_2" EntityType="Self.Table_2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Table_3" EntityType="Self.Table_3" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
